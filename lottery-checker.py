@@ -1,8 +1,7 @@
 #!/usr/bin/env python
 
 __doc__ = """
-Yêu cầu:
-Viết một script kiểm tra xem các số argument đầu vào có trúng lô không
+Sscript kiểm tra xem các số argument đầu vào có trúng lô không
 (2 số cuối trùng với một giải nào đó). Nếu không có argument nào thì print
 ra tất cả các giải từ đặc biệt -> giải 7.
 
@@ -12,17 +11,6 @@ ketqua.vn hay tự google ra các trang khác.
 Dạng của câu lệnh::
 
   ketqua.py [NUMBER1] [NUMBER2] [...]
-
-Các thư viện:
-
-- requests
-- requests_html https://pp.pymi.vn/article/requests-bs4-requests-html/
-hay beautifulsoup4 [tuỳ chọn]
-- argparse hay sys.argv
-
-Gợi ý:
-
-- ``nargs`` https://docs.python.org/2/library/argparse.html
 """
 
 import requests
@@ -83,10 +71,7 @@ def check_lotto(input_data, lottos):
 
 
 def solve(input_data):
-    """Function `solve` dùng để `test`, học viên không cần chỉnh sửa gì thêm
-    Chỉ thay đổi lại tên function của mình bên dưới cho phù hợp
-
-    Gía trị trả về của hàm `solve` và `your_function` là như nhau
+    """Function `solve` dùng để `test`
 
     :param input_data: number
     :rtype list:
@@ -108,7 +93,6 @@ def main():
     args = parser.parse_args()
     print(type(args.integers), args.integers)
 
-    # sử dụng `sys.argv` hoặc `argparse` để gán gía trị yêu cầu vào biến `args`
     print(solve(args.integers))
 
 
